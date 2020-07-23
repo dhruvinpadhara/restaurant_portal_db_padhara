@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/myproject</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password"></property>
+		<property name="show_sql">true</property>													
+		<property name="hbm2ddl.auto">update</property>
+
+		<!-- Order_master_model -->		
+		<mapping class="model.Order_master_model"/>
+
+		<mapping class="model.Order_child_model"/>
+		
+		<mapping class="model.Order_cart_model"/>
+		
+		<!-- state model -->
+		<mapping class="model.State_model"/>
+		
+		<!-- city model -->
+		<mapping class="model.City_model"/>
+		
+				<!-- state model -->
+		<mapping class="model.Area_model"/>
+		<!-- role model -->
+		<mapping class="model.Role_model"/>
+		
+		<!-- menu-model -->
+		<mapping class="model.Menu_model"/>
+		
+		<!-- sub menu-model -->
+		<mapping class="model.Submenu_model"/>
+		
+		
+		<!-- employee model -->	 
+		
+		<mapping class="model.Employee_model" />
+		
+		<!-- Payment model-->
+	
+		<mapping class="model.Payment_model" />	
+	
+		<!-- Paytm_model  -->
+		
+		<mapping class="model.Paytm_model" />
+		
+		<!-- book model -->
+		
+		<mapping class="model.Book_model"/>
+		
+		<!-- Table model -->	 
+		
+		<mapping class="model.Table_model" />
+		
+		
+		<!-- user Registration_model -->
+		<mapping class="model.Registration_model" />
+
+
+		<!-- using log entry -->
+		
+		<mapping class="model.Login_log"/>
+		
+		<mapping class="model.Transaction_log"/>
+
+
+	<!-- <property name="hibernate.enable_lazy_load_no_trans">true</property> -->
+	</session-factory>
+</hibernate-configuration>
